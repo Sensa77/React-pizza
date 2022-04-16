@@ -1,0 +1,47 @@
+.button {
+display: flex;
+position: relative;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #FE5F1E;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  padding-left: 23px;
+  padding-right: 20px;
+  padding-top: 16px;
+  padding-bottom: 18px;
+  justify-content: space-between;
+  font-family: Proxima Nova;
+}
+
+.button::after {
+content: "";
+display: block;
+position: absolute;
+width: 1px;
+height: 25px;
+background-color: #fff;
+opacity: 0.4;
+top: 25%;
+right: 46%;
+}
+
+.button__amount {
+  position: relative;
+}
+
+.button__amount::before {
+content: "";
+display: block;
+position: absolute;
+width: 17px;
+height: 17px;
+background-image: url(../../img/cart.svg);
+right: 0;
+margin-right: 17px;
+}

@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../src/fonts/ProximaNova-Regular.woff") format("woff"),
+    url("../src/fonts/ProximaNova-Regular.eot") format("eot"),
+    url("../src/fonts/ProximaNova-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../src/fonts/ProximaNova-Bold.woff") format("woff"),
+    url("../src/fonts/ProximaNova-Bold.eot") format("eot"),
+    url("../src/fonts/ProximaNova-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../src/fonts/ProximaNova-Light.woff") format("woff"),
+    url("../src/fonts/ProximaNova-Light.eot") format("eot"),
+    url("../src/fonts/ProximaNova-Light.ttf") format("ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../src/fonts/ProximaNova-Extrabld.woff") format("woff"),
+    url("../src/fonts/ProximaNova-Extrabld.eot") format("eot"),
+    url("../src/fonts/ProximaNova-Extrabld.ttf") format("ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+body {
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+  text-transform: none;
+  font-weight: normal;
+  background-color: #FFDF8C;
+  padding-top: 43px;
+  padding-left: 45px;
+  padding-right: 55px;
+  padding-bottom: 63px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

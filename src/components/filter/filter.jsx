@@ -4,12 +4,36 @@ import "./filter.scss";
 const Filter = () => {
   return (
     <ul className="filter">
-      <li className="filter__item">Все</li>
-      <li className="filter__item">Мясные</li>
-      <li className="filter__item">Вегетерианские</li>
-      <li className="filter__item">Гриль</li>
-      <li className="filter__item">Острые</li>
-      <li className="filter__item">Закрытые</li>
+      <li>
+        <button type="button" className="filter__item">
+          Все
+        </button>
+      </li>
+      <li>
+        <button type="button" className="filter__item">
+          Мясные
+        </button>
+      </li>
+      <li>
+        <button type="button" className="filter__item">
+          Вегетерианские
+        </button>
+      </li>
+      <li>
+        <button type="button" className="filter__item">
+          Гриль
+        </button>
+      </li>
+      <li>
+        <button type="button" className="filter__item">
+          Острые
+        </button>
+      </li>
+      <li>
+        <button type="button" className="filter__item">
+          Закрытые
+        </button>
+      </li>
     </ul>
   );
 };

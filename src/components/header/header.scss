@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  padding-left: 77px;
+  padding-right: 38px;
+  justify-content: space-between;
+  padding-top: 49px;
+  align-items: center;
+  position: relative;
+  padding-bottom: 35px;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: calc(100% - 12px);
+  height: 1px;
+  background-color: #F6F6F6;
+  right: 0;
+bottom: 0;
+}

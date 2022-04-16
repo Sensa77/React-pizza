@@ -12,8 +12,12 @@ const Logo = () => {
         width="38px"
         height="38px"
       ></img>
-      <span className="logo__title">React pizza</span>
-      <p className="logo__text">самая вкусная пицца во вселенной</p>
+      <div className="logo-text text">
+        <span className="logo-text__title">React pizza</span>
+        <p className="logo-text__description">
+          самая вкусная пицца во вселенной
+        </p>
+      </div>
     </div>
   );
 };
