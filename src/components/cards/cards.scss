@@ -1,0 +1,19 @@
+.cards {
+  padding-left: 67px;
+  padding-right: 48px;
+}
+
+.cards__title {
+  display: block;
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: bold;
+  text-align: start;
+  margin-bottom: 35px;
+}
+
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+
+}

@@ -2,6 +2,7 @@
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .filter__item {
@@ -22,4 +23,11 @@
 
 .filter__item:not(last-child) {
   margin-right: 9px;
+}
+
+.filter__item:hover,
+.filter__item:focus,
+.filter__item:active {
+  background-color: #282828;
+  color: #fff;
 }

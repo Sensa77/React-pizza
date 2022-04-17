@@ -6,14 +6,16 @@ const Cards = () => {
   return (
     <div className="cards">
       <span className="cards__title">Все пиццы</span>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <div className="cards__list">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 };

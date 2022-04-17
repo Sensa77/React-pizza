@@ -45,3 +45,18 @@ background-image: url(../../img/cart.svg);
 right: 0;
 margin-right: 17px;
 }
+
+.button:hover,
+.button:focus {
+  background-color: #fff;
+  border: 1px solid #FE5F1E;
+  color: #FE5F1E;
+}
+
+.button:hover::after {
+background-color: #FE5F1E;
+}
+
+.button:hover .button__amount::before {
+  background-image: url(../../img/cart-hover.svg);
+}

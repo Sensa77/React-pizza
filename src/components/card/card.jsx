@@ -1,66 +1,24 @@
 import React from "react";
+import CardFilter from "../card-filter/card.filter";
 import "./card.scss";
+import pizza from "./pizza.png";
 
 const Card = () => {
   return (
     <div className="card">
-      <img className="card__img" />
+      <img
+        className="card__img"
+        src={pizza}
+        width="259px"
+        height="260px"
+        alt="Фото пиццы"
+      />
       <span className="card__name">Сырная</span>
-      <div className="filter-container">
-        <form className="fiter-thickness">
-          <label className="fiter-thickness__label">
-            <input
-              type="radio"
-              className="fiter-thickness__input"
-              name="thickness"
-              value="thin"
-            />
-            Тонкое
-          </label>
-          <label className="fiter-thickness__label">
-            <input
-              type="radio"
-              className="fiter-thickness__input"
-              value="traditional"
-              name="thickness"
-            />
-            Традиционное
-          </label>
-        </form>
-        <form className="fiter-diameter">
-          <label className="fiter-diameter__label">
-            <input
-              type="radio"
-              className="fiter-diameter__input"
-              name="diameter"
-              value="26"
-            />
-            26 см
-          </label>
-          <label className="fiter-diameter__label">
-            <input
-              type="radio"
-              className="fiter-diameter__input"
-              name="diameter"
-              value="30"
-            />
-            30 см
-          </label>
-          <label className="fiter-diameter__label">
-            <input
-              type="radio"
-              className="fiter-diameter__input"
-              name="diameter"
-              value="40"
-            />
-            40 см см
-          </label>
-        </form>
-      </div>
+      <CardFilter />
       <div className="card-footer">
-        <span className="card-footer__price">от 395Р</span>
+        <span className="card-footer__price">от 395 ₽</span>
         <button type="button" className="card-footer__button">
-          <span className="card-footer__button-text">+ Добавить</span>
+          + Добавить
         </button>
       </div>
     </div>
