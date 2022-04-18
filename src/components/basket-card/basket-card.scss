@@ -79,6 +79,12 @@
   cursor: pointer;
 }
 
+.amount__button:hover{
+background-color: #FE5F1E;
+border: none;
+color: #fff;
+}
+
 .amount__number {
   font-size: 22px;
 line-height: 27px;
@@ -105,4 +111,11 @@ margin-right: 12px;
   border-radius: 50%;
   font-weight: bold;
   cursor: pointer;
+  fill: #D0D0D0;
+}
+
+.delete:hover {
+  position: relative;
+  fill: #fff;
+  background-color: #D7D7D7;
 }

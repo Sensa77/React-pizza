@@ -13,6 +13,7 @@
   padding-left: 46px;
 }
 
+
 .basket-header__title::before {
   content: "";
   display: block;
@@ -33,6 +34,7 @@
   cursor: pointer;
 }
 
+
 .basket-header__delete::before {
   content: "";
   display: block;
@@ -42,4 +44,13 @@
   background-image: url(../../img/trash.svg);
   left: 0;
 bottom: 1px;
+}
+
+.basket-header__delete:hover,
+.basket-header__delete:focus {
+  color: #000;
+}
+
+.basket-header__delete:hover::before{
+  background-image: url(../../img/trash-hover.svg);
 }

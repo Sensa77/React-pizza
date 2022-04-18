@@ -57,6 +57,18 @@
   top: 2px;
 }
 
+.basket-button__back:hover {
+  background-color: #D3D3D3;
+}
+
+.basket-button__back:hover .basket-button__back-text {
+  color: #fff;
+}
+
+.basket-button__back:hover .basket-button__back-text::before {
+  background-image: url(../../img/arrow-hover.svg);
+}
+
 .basket-button__payment {
   width: 211px;
   height: 55px;
@@ -68,4 +80,10 @@
   line-height: 19px;
   font-weight: bold;
 cursor: pointer;
+}
+
+.basket-button__payment:hover {
+  background-color: #fff;
+  border: 1px solid #FE5F1E;
+  color: #FE5F1E;
 }
