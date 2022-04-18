@@ -1,12 +1,12 @@
 import React from "react";
 import "./basket-page.scss";
-import Logo from "../../logo/logo";
 import Basket from "../../basket/basket";
+import Logo from "../../logo/logo";
 
 const BasketPage = () => {
   return (
     <>
-      <Logo />
+      <Logo className="basket-logo" />
       <Basket />
     </>
   );

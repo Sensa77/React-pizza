@@ -2,9 +2,9 @@ import React from "react";
 import "./logo.scss";
 import picture from "./logo.png";
 
-const Logo = () => {
+const Logo = ({ className = "" }) => {
   return (
-    <div className="logo">
+    <div className={`logo ${className}`}>
       <img
         className="logo__picture"
         src={picture}

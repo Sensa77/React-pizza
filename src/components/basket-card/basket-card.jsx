@@ -1,11 +1,18 @@
 import React from "react";
 import "./basket-card.scss";
+import miniPizza from "./mini-pizza.png";
 
 const BasketCard = () => {
   return (
     <div className="basket-card">
       <div className="basket-card__product product">
-        <img className="product__img" alt="Фото пиццы" src="" />
+        <img
+          className="product__img"
+          alt="Фото пиццы"
+          src={miniPizza}
+          width="80px"
+          height="80px"
+        />
         <div className="product__text text">
           <span className="text__title">Сырный цыпленок</span>
           <p className="text__decription">тонкое тесто, 26 см</p>
@@ -14,7 +21,7 @@ const BasketCard = () => {
       <div className="basket-card__characteristics characteristics">
         <div className="characteristics__amount amount">
           <button type="button" className="amount__button">
-            -
+            −
           </button>
           <span className="amount__number">2</span>
           <button type="button" className="amount__button">
@@ -22,11 +29,11 @@ const BasketCard = () => {
           </button>
         </div>
         <div className="characteristics__price price">
-          <span className="price__text">770 P</span>
+          <span className="price__text">770 ₽</span>
         </div>
         <button type="button" className="characteristics__delete delete">
           <svg
-            width="10"
+            width="11"
             height="9"
             viewBox="0 0 10 9"
             fill="none"

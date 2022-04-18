@@ -1,7 +1,7 @@
 import React from "react";
-import BasketCard from "../basket-card/basket-card";
 import BasketFooter from "../basket-footer/basket-footer";
 import BasketHeader from "../basket-header/basket-header";
+import BasketCards from "../basket-cards/basket-cards";
 import Empty from "../empty/empty";
 import "./basket.scss";
 
@@ -9,7 +9,7 @@ const Basket = () => {
   return (
     <div className="basket">
       <BasketHeader />
-      <BasketCard />
+      <BasketCards />
       <BasketFooter />
     </div>
   );

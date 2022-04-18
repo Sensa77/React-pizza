@@ -1,0 +1,71 @@
+.detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.detail__amount-pizza {
+  font-size: 22px;
+  line-height: 27px;
+
+  &--width-bold {
+    font-weight: 800;
+  }
+}
+
+.detail__order-price {
+  font-size: 22px;
+  line-height: 27px;
+
+  &--width-bold {
+    font-weight: bold;
+    color: #FE5F1E;
+  }
+}
+
+.basket-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.basket-button__back {
+  width: 211px;
+  height: 55px;
+  border: 1px solid #D3D3D3;
+  background-color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.basket-button__back-text {
+  position: relative;
+  font-size: 16px;
+  line-height: 19px;
+  color: #CACACA;
+  padding-left: 20px;
+}
+
+.basket-button__back-text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 12px;
+  background-image: url(../../img/arrow.svg);
+  left: 0;
+  top: 2px;
+}
+
+.basket-button__payment {
+  width: 211px;
+  height: 55px;
+  border-radius: 30px;
+  background-color: #FE5F1E;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+cursor: pointer;
+}

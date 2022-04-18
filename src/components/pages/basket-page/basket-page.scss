@@ -1,0 +1,17 @@
+.basket-logo {
+  padding-top: 42px;
+  padding-left: 67px;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.basket-logo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #F6F6F6;
+  bottom: 0;
+  left: 0;
+}
