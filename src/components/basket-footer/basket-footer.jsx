@@ -1,5 +1,6 @@
 import React from "react";
 import "./basket-footer.scss";
+import { Link } from "react-router-dom";
 
 const BasketFooter = () => {
   return (
@@ -15,9 +16,11 @@ const BasketFooter = () => {
         </div>
       </div>
       <div className="basket-button">
-        <button type="button" className="basket-button__back">
-          <span className="basket-button__back-text">Вернуться назад</span>
-        </button>
+        <Link to="/">
+          <button type="button" className="basket-button__back">
+            <span className="basket-button__back-text">Вернуться назад</span>
+          </button>
+        </Link>
         <button type="button" className="basket-button__payment">
           Оплатить сейчас
         </button>
