@@ -1,20 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./cards.scss";
 import Card from "../card/card";
+import { useDispatch, useSelector } from "react-redux";
+import { viewPizzasSelector, statusSelector } from "./cards-slice";
+import { getPizzasData } from "./cards-slice";
+import EmptyCard from "../empty-card/empty-card";
 
 const Cards = () => {
+  const filteringData = useSelector(viewPizzasSelector);
+  const status = useSelector(statusSelector);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPizzasData());
+  }, [dispatch]);
+
   return (
     <div className="cards">
       <span className="cards__title">Все пиццы</span>
       <div className="cards__list">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {status === "done" && !filteringData.length && <EmptyCard />}
+        {status === "done" &&
+          filteringData.map((pizza) => {
+            return (
+              <Card
+                key={pizza.id}
+                id={pizza.id}
+                name={pizza.name}
+                img={pizza.imageUrl}
+                price={pizza.price}
+                types={pizza.types}
+                size={pizza.sizes}
+              />
+            );
+          })}
       </div>
     </div>
   );

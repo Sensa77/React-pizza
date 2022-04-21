@@ -2,7 +2,6 @@ import React from "react";
 import BasketFooter from "../basket-footer/basket-footer";
 import BasketHeader from "../basket-header/basket-header";
 import BasketCards from "../basket-cards/basket-cards";
-import Empty from "../empty/empty";
 import "./basket.scss";
 
 const Basket = () => {

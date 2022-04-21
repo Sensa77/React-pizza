@@ -1,8 +1,8 @@
 import React from "react";
-import "./empty.scss";
-import empty from "./empty.png";
+import "./empty-basket.scss";
+import empty from "./empty-basket.png";
 
-const Empty = () => {
+const EmptyBasket = () => {
   return (
     <div className="empty">
       <span className="empty__title">Корзина пустая 😕</span>
@@ -25,4 +25,4 @@ const Empty = () => {
   );
 };
 
-export default Empty;
+export default EmptyBasket;

@@ -2,6 +2,7 @@ import React from "react";
 import "./card-filter.scss";
 
 const CardFilter = () => {
+  const disabled = true;
   return (
     <div className="filter-container">
       <form className="filter-thickness">
@@ -33,8 +34,12 @@ const CardFilter = () => {
           name="diameter"
           value="26"
           id="26"
+          disabled={disabled}
         />
-        <label className="filter-diameter__label" htmlFor="26">
+        <label
+          className="filter-diameter__label filter-diameter__label--isDisabled"
+          htmlFor="26"
+        >
           26 см
         </label>
         <input

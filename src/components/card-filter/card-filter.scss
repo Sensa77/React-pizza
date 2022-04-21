@@ -39,7 +39,12 @@ background-color: #fff;
 
 .filter-diameter__label {
   padding: 7px 25px;
+
+&--isDisabled {
+  opacity: 0.3;
 }
+}
+
 
 input[type="radio"]:checked + .filter-thickness__label,
 input[type="radio"]:checked + .filter-diameter__label {
