@@ -5,6 +5,7 @@ import {
   pizzasSelector,
   changeCategory,
   categorySelector,
+  changeLabelCategory,
 } from "../cards/cards-slice";
 import filterList from "../../utils/filters";
 import "./filter.scss";
@@ -46,6 +47,7 @@ const Filter = () => {
               className={`filter__item ${selectActive(category)}`}
               onClick={() => {
                 dispatch(changeCategory(category));
+                dispatch(changeLabelCategory(label));
               }}
             >
               {label}

@@ -7,6 +7,8 @@ const initialState = {
   status: "",
   viewPizzas: [],
   category: "все",
+  labelCategory: "Все",
+  sortName: "популярности",
 };
 
 export const getPizzasData = createAsyncThunk("getPizzasData", async () => {
@@ -32,6 +34,12 @@ export const cardsSlice = createSlice({
     changeCategory: (state, action) => {
       state.category = action.payload;
     },
+    changeLabelCategory: (state, action) => {
+      state.labelCategory = action.payload;
+    },
+    changeSortName: (state, action) => {
+      state.sortName = action.payload;
+    },
   },
   extraReducers: {
     [getPizzasData.pending]: (state) => {
@@ -51,5 +59,12 @@ export const pizzasSelector = (state) => state.cards.pizzas;
 export const statusSelector = (state) => state.cards.status;
 export const categorySelector = (state) => state.cards.category;
 export const viewPizzasSelector = (state) => state.cards.viewPizzas;
-export const { filteringPizza, changeCategory } = cardsSlice.actions;
+export const labelCategorySelector = (state) => state.cards.labelCategory;
+export const sortNameSelector = (state) => state.cards.sortName;
+export const {
+  filteringPizza,
+  changeCategory,
+  changeLabelCategory,
+  changeSortName,
+} = cardsSlice.actions;
 export default cardsSlice.reducer;
