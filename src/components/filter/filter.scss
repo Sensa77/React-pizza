@@ -19,6 +19,11 @@
   cursor: pointer;
   padding-left: 30px;
   padding-right:30px;
+
+  &--isActive {
+    background-color: #282828;
+    color: #fff;
+  }
 }
 
 .filter__item:not(last-child) {
@@ -31,3 +36,5 @@
   background-color: #282828;
   color: #fff;
 }
+
+

@@ -28,6 +28,14 @@ const Filter = () => {
     cards.length && dispatch(filteringPizza(filterItem(categoryData)));
   }, [categoryData, cards]);
 
+  const selectActive = (category) => {
+    if (category === categoryData) {
+      return "filter__item--isActive";
+    } else {
+      return "";
+    }
+  };
+
   return (
     <ul className="filter">
       {filterList.map(({ label, category }) => {
@@ -35,8 +43,10 @@ const Filter = () => {
           <li>
             <button
               type="button"
-              className="filter__item"
-              onClick={() => dispatch(changeCategory(category))}
+              className={`filter__item ${selectActive(category)}`}
+              onClick={() => {
+                dispatch(changeCategory(category));
+              }}
             >
               {label}
             </button>
