@@ -40,6 +40,9 @@ export const cardsSlice = createSlice({
     changeSortName: (state, action) => {
       state.sortName = action.payload;
     },
+    sortPizza: (state, action) => {
+      state.viewPizzas = action.payload;
+    },
   },
   extraReducers: {
     [getPizzasData.pending]: (state) => {
@@ -66,5 +69,6 @@ export const {
   changeCategory,
   changeLabelCategory,
   changeSortName,
+  sortPizza,
 } = cardsSlice.actions;
 export default cardsSlice.reducer;

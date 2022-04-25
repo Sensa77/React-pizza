@@ -1,5 +1,5 @@
 import React from "react";
-import CardFilter from "../card-filter/card.filter";
+import CardFilter from "../card-filter/card-filter";
 import "./card.scss";
 import pizza from "./pizza.png";
 

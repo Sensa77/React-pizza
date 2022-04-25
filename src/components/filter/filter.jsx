@@ -6,14 +6,23 @@ import {
   changeCategory,
   categorySelector,
   changeLabelCategory,
+  sortNameSelector,
+  viewPizzasSelector,
 } from "../cards/cards-slice";
 import filterList from "../../utils/filters";
 import "./filter.scss";
+import {
+  sortedByAlphabet,
+  sortedByPopularity,
+  sortedByPrice,
+} from "../../utils/sort";
 
 const Filter = () => {
   const dispatch = useDispatch();
   const cards = useSelector(pizzasSelector);
   const categoryData = useSelector(categorySelector);
+  const sortName = useSelector(sortNameSelector);
+  const viewPizzas = useSelector(viewPizzasSelector);
 
   const filterItem = (category) => {
     if (category === "все") {
@@ -25,9 +34,29 @@ const Filter = () => {
     }
   };
 
+  const sortItem = (viewPizzas) => {
+    switch (sortName) {
+      case "популярности":
+        return sortedByPopularity(viewPizzas);
+      case "цене":
+        return sortedByPrice(viewPizzas);
+      case "алфавиту":
+        return sortedByAlphabet(viewPizzas);
+      default:
+        return viewPizzas;
+    }
+  };
+
   useEffect(() => {
-    cards.length && dispatch(filteringPizza(filterItem(categoryData)));
+    const filteredItems = filterItem(categoryData);
+    const sortedItems = sortItem(filteredItems);
+    cards.length && dispatch(filteringPizza(sortedItems));
   }, [categoryData, cards]);
+
+  useEffect(() => {
+    const sortedItems = sortItem(viewPizzas);
+    cards.length && dispatch(filteringPizza(sortedItems));
+  }, [sortName]);
 
   const selectActive = (category) => {
     if (category === categoryData) {

@@ -50,15 +50,15 @@ top: 35px;
 .select__label {
   height: 38px;
   padding-left: 14px;
+  padding-top: 10px;
   width: 100%;
   text-align: start;
   cursor: pointer;
 }
 
 .select__label:hover,
-.select__label:focus,
-.select__label:active {
+.select__input:focus + .select__label  {
   background-color: rgba(254, 95, 30, 0.05);
   color: #FE5F1E;
   font-weight: bold;
-}
+}       

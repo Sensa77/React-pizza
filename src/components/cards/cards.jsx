@@ -36,6 +36,7 @@ const Cards = () => {
                 price={pizza.price}
                 types={pizza.types}
                 size={pizza.sizes}
+                rating={pizza.rating}
               />
             );
           })}
