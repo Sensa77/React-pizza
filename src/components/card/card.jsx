@@ -3,7 +3,7 @@ import CardFilter from "../card-filter/card-filter";
 import "./card.scss";
 import pizza from "./pizza.png";
 
-const Card = ({ name, img, price, size }) => {
+const Card = ({ name, img, price, id, size, types }) => {
   return (
     <div className="card">
       <img
@@ -14,7 +14,7 @@ const Card = ({ name, img, price, size }) => {
         alt="Фото пиццы"
       />
       <span className="card__name">{name}</span>
-      <CardFilter />
+      <CardFilter id={id} size={size} types={types} />
       <div className="card-footer">
         <span className="card-footer__price">от {price} ₽</span>
         <button type="button" className="card-footer__button">

@@ -5,7 +5,7 @@
   border-radius: 10px;
   padding-left: 6px;
   padding-right: 6px;
-  padding-top: 7px;
+  padding-top: 15px;
   padding-bottom: 7px;
   margin-bottom: 17px;
 }
@@ -13,14 +13,18 @@
 .filter-thickness {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 7px;
+  margin-bottom: 20px;
+}
+
+.filter-thickness__input:disabled + .filter-thickness__label {
+  opacity: 0.3;
+  cursor: no-drop;
 }
 
 .filter-thickness__label,
 .filter-diameter__label{
   padding: 7px 31px;
   border-radius: 5px;
-  box-shadow: 0px 2px 4px 0px #0000000A;
   cursor: pointer;
   font-weight: bold;
 }
@@ -30,6 +34,7 @@
 .filter-thickness__label:focus,
 .filter-diameter__label:focus {
 background-color: #fff;
+box-shadow: 0px 2px 4px 0px #0000000A;
 }
 
 .filter-diameter {
@@ -37,16 +42,18 @@ background-color: #fff;
   justify-content: space-between;
 }
 
+.filter-diameter__input:disabled + .filter-diameter__label {
+  opacity: 0.3;
+  cursor: no-drop;
+}
+
 .filter-diameter__label {
   padding: 7px 25px;
-
-&--isDisabled {
-  opacity: 0.3;
-}
 }
 
 
 input[type="radio"]:checked + .filter-thickness__label,
 input[type="radio"]:checked + .filter-diameter__label {
   background-color: #fff;
+  box-shadow: 0px 2px 4px 0px #0000000A;
 }
