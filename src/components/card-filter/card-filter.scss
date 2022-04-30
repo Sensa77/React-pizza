@@ -27,6 +27,9 @@
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  &--error {
+    color: red;
+  }
 }
 
 .filter-thickness__label:hover,
@@ -56,4 +59,10 @@ input[type="radio"]:checked + .filter-thickness__label,
 input[type="radio"]:checked + .filter-diameter__label {
   background-color: #fff;
   box-shadow: 0px 2px 4px 0px #0000000A;
+}
+
+.filter-error {
+  color: red;
+  font-weight:bold;
+  margin-bottom: 15px;
 }

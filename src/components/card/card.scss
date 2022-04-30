@@ -39,11 +39,10 @@
   border-radius: 30px;
   color: #FE5F1E;
   font-weight: bold;
+  cursor: pointer;
 }
 
-
-.card-footer__button:hover,
-.card-footer__button:focus {
+.card-footer__button:hover{
   background-color: #FE5F1E;
   color: #fff;
 }
