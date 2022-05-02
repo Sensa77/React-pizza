@@ -3,11 +3,20 @@ import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import CardFilter from "../card-filter/card-filter";
-import { basketSelector, addToBasket } from "../cards/cards-slice";
+import {
+  basketSelector,
+  addToBasket,
+  changeTotalCounter,
+  totalCounterSelector,
+  changeTotalPrice,
+  totalPriceSelector,
+} from "../cards/cards-slice";
 import "./card.scss";
 
 const Card = ({ name, img, price, id, size, types }) => {
   const basket = useSelector(basketSelector);
+  const totalCounter = useSelector(totalCounterSelector);
+  const totalPrice = useSelector(totalPriceSelector);
   const dispatch = useDispatch();
   const methods = useForm();
 
@@ -36,6 +45,8 @@ const Card = ({ name, img, price, id, size, types }) => {
                   ...value,
                 })
               );
+              dispatch(changeTotalCounter(totalCounter + 1));
+              dispatch(changeTotalPrice(totalPrice + price));
             })}
           >
             + Добавить

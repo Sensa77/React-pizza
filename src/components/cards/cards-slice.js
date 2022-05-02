@@ -10,6 +10,8 @@ const initialState = {
   labelCategory: "Все",
   sortName: "популярности",
   basket: {},
+  totalCounter: 0,
+  totalPrice: 0,
 };
 
 export const getPizzasData = createAsyncThunk("getPizzasData", async () => {
@@ -54,6 +56,12 @@ export const cardsSlice = createSlice({
         },
       };
     },
+    changeTotalCounter: (state, action) => {
+      state.totalCounter = action.payload;
+    },
+    changeTotalPrice: (state, action) => {
+      state.totalPrice = action.payload;
+    },
   },
 
   extraReducers: {
@@ -77,6 +85,8 @@ export const viewPizzasSelector = (state) => state.cards.viewPizzas;
 export const labelCategorySelector = (state) => state.cards.labelCategory;
 export const sortNameSelector = (state) => state.cards.sortName;
 export const basketSelector = (state) => state.cards.basket;
+export const totalCounterSelector = (state) => state.cards.totalCounter;
+export const totalPriceSelector = (state) => state.cards.totalPrice;
 export const {
   filteringPizza,
   changeCategory,
@@ -84,5 +94,7 @@ export const {
   changeSortName,
   sortPizza,
   addToBasket,
+  changeTotalCounter,
+  changeTotalPrice,
 } = cardsSlice.actions;
 export default cardsSlice.reducer;
