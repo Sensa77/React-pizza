@@ -1,18 +1,13 @@
 import { DevTool } from "@hookform/devtools";
-import React from "react";
+import React, { useEffect } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import CardFilter from "../card-filter/card-filter";
-import {
-  basketSelector,
-  addToBasket,
-  pizzasSelector,
-} from "../cards/cards-slice";
+import { basketSelector, addToBasket } from "../cards/cards-slice";
 import "./card.scss";
 
 const Card = ({ name, img, price, id, size, types }) => {
   const basket = useSelector(basketSelector);
-  const pizzas = useSelector(pizzasSelector);
   const dispatch = useDispatch();
   const methods = useForm();
 
@@ -44,6 +39,9 @@ const Card = ({ name, img, price, id, size, types }) => {
             })}
           >
             + Добавить
+            {basket[id]?.count && (
+              <div className="card-footer__button-count">{` ${basket[id]?.count}`}</div>
+            )}
           </button>
         </div>
       </div>
