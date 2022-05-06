@@ -1,21 +1,42 @@
 import React from "react";
 import "./basket-card.scss";
-import miniPizza from "./mini-pizza.png";
+import thicknessUtils from "../../utils/pizza-size";
+import { useSelector } from "react-redux";
+import { basketSelector, pizzasSelector } from "../cards/cards-slice";
 
-const BasketCard = () => {
+const BasketCard = ({ id, count, diameter, thickness }) => {
+  const pizzas = useSelector(pizzasSelector);
+  const basket = useSelector(basketSelector);
+  const basketEntries = Object.entries(basket);
+
+  const thicknessName = thicknessUtils.find((item) => {
+    if (item.key === thickness) {
+      return true;
+    }
+    return false;
+  });
+
+  const pizzaCard = pizzas.find((pizza) => {
+    if (pizza.id === +id) {
+      return pizza;
+    }
+  });
+
   return (
     <div className="basket-card">
       <div className="basket-card__product product">
         <img
           className="product__img"
           alt="Фото пиццы"
-          src={miniPizza}
+          src={pizzaCard.imageUrl}
           width="80px"
           height="80px"
         />
         <div className="product__text text">
-          <span className="text__title">Сырный цыпленок</span>
-          <p className="text__decription">тонкое тесто, 26 см</p>
+          <span className="text__title">{pizzaCard.name}</span>
+          <p className="text__decription">
+            {thicknessName.label} тесто, {diameter} см
+          </p>
         </div>
       </div>
       <div className="basket-card__characteristics characteristics">
@@ -23,13 +44,13 @@ const BasketCard = () => {
           <button type="button" className="amount__button">
             −
           </button>
-          <span className="amount__number">2</span>
+          <span className="amount__number">{count}</span>
           <button type="button" className="amount__button">
             +
           </button>
         </div>
         <div className="characteristics__price price">
-          <span className="price__text">770 ₽</span>
+          <span className="price__text">{pizzaCard.price} ₽</span>
         </div>
         <button type="button" className="characteristics__delete delete">
           <svg

@@ -1,18 +1,26 @@
 import React from "react";
 import "./basket-footer.scss";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { totalCounterSelector, totalPriceSelector } from "../cards/cards-slice";
 
 const BasketFooter = () => {
+  const totalCounter = useSelector(totalCounterSelector);
+  const totalPrice = useSelector(totalPriceSelector);
   return (
     <>
       <div className="detail">
         <span className="detail__amount-pizza">
           Всего пицц:{" "}
-          <span className="detail__amount-pizza--width-bold">3 шт.</span>
+          <span className="detail__amount-pizza--width-bold">
+            {totalCounter} шт.
+          </span>
         </span>
         <div className="detail__order-price">
           Сумма заказа:{" "}
-          <span className="detail__order-price--width-bold">900 ₽</span>
+          <span className="detail__order-price--width-bold">
+            {totalPrice} ₽
+          </span>
         </div>
       </div>
       <div className="basket-button">
