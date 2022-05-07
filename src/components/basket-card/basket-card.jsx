@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./basket-card.scss";
 import thicknessUtils from "../../utils/pizza-size";
-import { useSelector } from "react-redux";
-import { basketSelector, pizzasSelector } from "../cards/cards-slice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  changeTotalCounter,
+  changeTotalPrice,
+  pizzasSelector,
+  totalCounterSelector,
+  totalPriceSelector,
+} from "../cards/cards-slice";
 
 const BasketCard = ({ id, count, diameter, thickness }) => {
   const pizzas = useSelector(pizzasSelector);
-  const basket = useSelector(basketSelector);
-  const basketEntries = Object.entries(basket);
+  const totalCounter = useSelector(totalCounterSelector);
+  const totalPrice = useSelector(totalPriceSelector);
+  const [countData, setCountData] = useState(count);
+  const dispatch = useDispatch();
 
   const thicknessName = thicknessUtils.find((item) => {
     if (item.key === thickness) {
@@ -41,11 +49,31 @@ const BasketCard = ({ id, count, diameter, thickness }) => {
       </div>
       <div className="basket-card__characteristics characteristics">
         <div className="characteristics__amount amount">
-          <button type="button" className="amount__button">
+          <button
+            type="button"
+            className="amount__button"
+            onClick={() => {
+              {
+                if (countData > 1) {
+                  setCountData(countData - 1);
+                  dispatch(changeTotalCounter(totalCounter - 1));
+                  dispatch(changeTotalPrice(totalPrice - pizzaCard.price));
+                }
+              }
+            }}
+          >
             −
           </button>
-          <span className="amount__number">{count}</span>
-          <button type="button" className="amount__button">
+          <span className="amount__number">{countData}</span>
+          <button
+            type="button"
+            className="amount__button"
+            onClick={() => {
+              setCountData(countData + 1);
+              dispatch(changeTotalCounter(totalCounter + 1));
+              dispatch(changeTotalPrice(totalPrice + pizzaCard.price));
+            }}
+          >
             +
           </button>
         </div>
