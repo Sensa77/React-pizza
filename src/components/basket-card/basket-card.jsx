@@ -3,8 +3,11 @@ import "./basket-card.scss";
 import thicknessUtils from "../../utils/pizza-size";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  addToBasket,
+  basketSelector,
   changeTotalCounter,
   changeTotalPrice,
+  deleteBasketElement,
   pizzasSelector,
   totalCounterSelector,
   totalPriceSelector,
@@ -12,9 +15,9 @@ import {
 
 const BasketCard = ({ id, count, diameter, thickness }) => {
   const pizzas = useSelector(pizzasSelector);
+  const basket = useSelector(basketSelector);
   const totalCounter = useSelector(totalCounterSelector);
   const totalPrice = useSelector(totalPriceSelector);
-  const [countData, setCountData] = useState(count);
   const dispatch = useDispatch();
 
   const thicknessName = thicknessUtils.find((item) => {
@@ -54,8 +57,13 @@ const BasketCard = ({ id, count, diameter, thickness }) => {
             className="amount__button"
             onClick={() => {
               {
-                if (countData > 1) {
-                  setCountData(countData - 1);
+                if (basket[id]?.count > 1) {
+                  dispatch(
+                    addToBasket({
+                      id,
+                      count: basket[id]?.count - 1,
+                    })
+                  );
                   dispatch(changeTotalCounter(totalCounter - 1));
                   dispatch(changeTotalPrice(totalPrice - pizzaCard.price));
                 }
@@ -64,12 +72,17 @@ const BasketCard = ({ id, count, diameter, thickness }) => {
           >
             −
           </button>
-          <span className="amount__number">{countData}</span>
+          <span className="amount__number">{basket[id]?.count}</span>
           <button
             type="button"
             className="amount__button"
             onClick={() => {
-              setCountData(countData + 1);
+              dispatch(
+                addToBasket({
+                  id,
+                  count: (basket[id]?.count || 0) + 1,
+                })
+              );
               dispatch(changeTotalCounter(totalCounter + 1));
               dispatch(changeTotalPrice(totalPrice + pizzaCard.price));
             }}
@@ -80,7 +93,17 @@ const BasketCard = ({ id, count, diameter, thickness }) => {
         <div className="characteristics__price price">
           <span className="price__text">{pizzaCard.price} ₽</span>
         </div>
-        <button type="button" className="characteristics__delete delete">
+        <button
+          type="button"
+          className="characteristics__delete delete"
+          onClick={() => {
+            dispatch(deleteBasketElement(id));
+            dispatch(changeTotalCounter(totalCounter - basket[id]?.count));
+            dispatch(
+              changeTotalPrice(totalPrice - basket[id]?.count * pizzaCard.price)
+            );
+          }}
+        >
           <svg
             width="11"
             height="9"

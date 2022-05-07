@@ -62,6 +62,12 @@ export const cardsSlice = createSlice({
     changeTotalPrice: (state, action) => {
       state.totalPrice = action.payload;
     },
+    deleteBasketElement: (state, action) => {
+      const id = action.payload;
+      const newObj = { ...state.basket };
+      delete newObj[id];
+      state.basket = newObj;
+    },
   },
 
   extraReducers: {
@@ -96,5 +102,6 @@ export const {
   addToBasket,
   changeTotalCounter,
   changeTotalPrice,
+  deleteBasketElement,
 } = cardsSlice.actions;
 export default cardsSlice.reducer;
