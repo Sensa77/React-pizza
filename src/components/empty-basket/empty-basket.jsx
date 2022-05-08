@@ -1,6 +1,7 @@
 import React from "react";
 import "./empty-basket.scss";
 import empty from "./empty-basket.png";
+import { Link } from "react-router-dom";
 
 const EmptyBasket = () => {
   return (
@@ -18,9 +19,11 @@ const EmptyBasket = () => {
         width="299px"
         heigth="255px"
       />
-      <button type="button" className="empty__back">
-        Вернуться назад
-      </button>
+      <Link to="/">
+        <button type="button" className="empty__back">
+          Вернуться назад
+        </button>
+      </Link>
     </div>
   );
 };
