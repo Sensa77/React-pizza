@@ -35,7 +35,9 @@
 .filter-thickness__label:hover,
 .filter-diameter__label:hover,
 .filter-thickness__label:focus,
-.filter-diameter__label:focus {
+.filter-diameter__label:focus,
+.filter-diameter__label:active,
+.filter-thickness__label:active {
 background-color: #fff;
 box-shadow: 0px 2px 4px 0px #0000000A;
 }

@@ -70,7 +70,7 @@ const Filter = () => {
     <ul className="filter">
       {filterList.map(({ label, category }) => {
         return (
-          <li>
+          <li key={label}>
             <button
               type="button"
               className={`filter__item ${selectActive(category)}`}

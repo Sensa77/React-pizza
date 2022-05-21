@@ -2,13 +2,9 @@ import React from "react";
 import "./card-filter.scss";
 import thickness from "../../utils/pizza-size";
 import { diameter } from "../../utils/pizza-size";
-import { useDispatch, useSelector } from "react-redux";
-import { addToBasket, basketSelector } from "../cards/cards-slice";
 import { useFormContext } from "react-hook-form";
 
 const CardFilter = ({ id, size, types }) => {
-  const basket = useSelector(basketSelector);
-  const dispatch = useDispatch();
   const {
     register,
     formState: { errors },

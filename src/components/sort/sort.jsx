@@ -1,11 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  sortNameSelector,
-  changeSortName,
-  viewPizzasSelector,
-  sortPizza,
-} from "../cards/cards-slice";
+import { sortNameSelector, changeSortName } from "../cards/cards-slice";
 import "./sort.scss";
 
 const Sort = () => {
@@ -16,7 +11,6 @@ const Sort = () => {
   const [selectIsActive, setSelectIsActive] = useState(false);
   const dispatch = useDispatch();
   const sortName = useSelector(sortNameSelector);
-  const viewPizzas = useSelector(viewPizzasSelector);
 
   const handleClick = (event) => {
     // проверяю наличие event.target в элементе, который находится в ref. Если event.target не внутри ref.current - закрываю окошко

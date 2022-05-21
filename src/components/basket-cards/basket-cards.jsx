@@ -6,7 +6,6 @@ import { basketSelector } from "../cards/cards-slice";
 
 const BasketCards = () => {
   const basket = useSelector(basketSelector);
-  console.log(basket.length);
   const basketArr = Object.entries(basket);
   return (
     <div className="basket-cards">

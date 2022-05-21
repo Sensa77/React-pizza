@@ -1,5 +1,5 @@
 import { DevTool } from "@hookform/devtools";
-import React, { useEffect } from "react";
+import React from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import CardFilter from "../card-filter/card-filter";

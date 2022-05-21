@@ -9,6 +9,8 @@ import {
 } from "./cards-slice";
 import { getPizzasData } from "./cards-slice";
 import EmptyCard from "../empty-card/empty-card";
+import Spinner from "../spinner/spinner";
+import Error from "../error/error";
 
 const Cards = () => {
   const filteringData = useSelector(viewPizzasSelector);
@@ -24,6 +26,8 @@ const Cards = () => {
     <div className="cards">
       <span className="cards__title">{`${labelCategory} пиццы`} </span>
       <div className="cards__list">
+        {status === "loading" && <Spinner />}
+        {status === "error" && <Error />}
         {status === "done" && !filteringData.length && <EmptyCard />}
         {status === "done" &&
           filteringData.map((pizza) => {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./basket-card.scss";
 import thicknessUtils from "../../utils/pizza-size";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +13,7 @@ import {
   totalPriceSelector,
 } from "../cards/cards-slice";
 
-const BasketCard = ({ id, count, diameter, thickness }) => {
+const BasketCard = ({ id, diameter, thickness }) => {
   const pizzas = useSelector(pizzasSelector);
   const basket = useSelector(basketSelector);
   const totalCounter = useSelector(totalCounterSelector);
