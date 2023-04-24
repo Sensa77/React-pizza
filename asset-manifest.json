@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/React-pizza/static/css/main.febc1e19.css",
+    "main.js": "/React-pizza/static/js/main.ff78644d.js",
+    "static/media/pizza.png": "/React-pizza/static/media/pizza.0df2da3813c803d47be4.png",
+    "static/media/error-pizza.png": "/React-pizza/static/media/error-pizza.898f4f8c58ecfb8aea3b.png",
+    "static/media/ProximaNova-Light.eot": "/React-pizza/static/media/ProximaNova-Light.dc970b778a98f9a75423.eot",
+    "static/media/ProximaNova-Light.ttf": "/React-pizza/static/media/ProximaNova-Light.f70705f204f9b7f11d76.ttf",
+    "static/media/ProximaNova-Regular.eot": "/React-pizza/static/media/ProximaNova-Regular.d97f8f32c098b28c3ab0.eot",
+    "static/media/ProximaNova-Regular.ttf": "/React-pizza/static/media/ProximaNova-Regular.b078618b41b9b6629ea0.ttf",
+    "static/media/ProximaNova-Bold.eot": "/React-pizza/static/media/ProximaNova-Bold.787088b281e017f8c449.eot",
+    "static/media/ProximaNova-Extrabld.eot": "/React-pizza/static/media/ProximaNova-Extrabld.b9fcd9fbe4d0b5e73cbd.eot",
+    "static/media/ProximaNova-Bold.ttf": "/React-pizza/static/media/ProximaNova-Bold.7722451a8c88b6100185.ttf",
+    "static/media/ProximaNova-Extrabld.ttf": "/React-pizza/static/media/ProximaNova-Extrabld.026a945d32b05c6c8710.ttf",
+    "static/media/ProximaNova-Light.woff": "/React-pizza/static/media/ProximaNova-Light.6f5ad2ca80abea2876d4.woff",
+    "static/media/ProximaNova-Regular.woff": "/React-pizza/static/media/ProximaNova-Regular.99528640efded3e12591.woff",
+    "static/media/ProximaNova-Bold.woff": "/React-pizza/static/media/ProximaNova-Bold.1f267da183b3d4fe3d5b.woff",
+    "static/media/ProximaNova-Extrabld.woff": "/React-pizza/static/media/ProximaNova-Extrabld.64f095e95e4018946cb1.woff",
+    "static/media/empty-basket.png": "/React-pizza/static/media/empty-basket.5d135f9e8394c78608a5.png",
+    "static/media/basket-cart.svg": "/React-pizza/static/media/basket-cart.dcd5168086a25b3307ba.svg",
+    "static/media/cart-hover.svg": "/React-pizza/static/media/cart-hover.afe4b565c3c347c73ae8.svg",
+    "static/media/cart.svg": "/React-pizza/static/media/cart.d05720f2b474db214523.svg",
+    "static/media/trash-hover.svg": "/React-pizza/static/media/trash-hover.f096761c43da1dac8a9c.svg",
+    "static/media/trash.svg": "/React-pizza/static/media/trash.ceafcffb34cece0b1462.svg",
+    "static/media/triangle.svg": "/React-pizza/static/media/triangle.8a732a7211d0fa00bfd6.svg",
+    "index.html": "/React-pizza/index.html",
+    "static/media/arrow-hover.svg": "/React-pizza/static/media/arrow-hover.f29ecdc0c9ef979554d5.svg",
+    "static/media/arrow.svg": "/React-pizza/static/media/arrow.fc29ec73901b6f8218c9.svg",
+    "main.febc1e19.css.map": "/React-pizza/static/css/main.febc1e19.css.map",
+    "main.ff78644d.js.map": "/React-pizza/static/js/main.ff78644d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.febc1e19.css",
+    "static/js/main.ff78644d.js"
+  ]
+}
